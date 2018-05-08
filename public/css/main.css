@@ -1,0 +1,125 @@
+/*cutsom styling*/
+html,body{
+    height: 100%;
+}
+
+h1, .nav-pills>li>a {
+  color: #264653;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+h3 {
+  color:#2A9D8F;
+  text-transform: uppercase;
+}
+.nav-pills>li{
+  background:#E76F51;
+
+}
+.nav-pills>li.active>a{
+  background: #F4A261;
+}
+.nav-pills>li>a{
+  color: #264653;
+}
+/*COLUMNS WITH THE EQUAL HEIGHT*/
+.container-flex, .container-order,.flex-center-center{
+  display:flex;
+  flex-direction: row;
+  align-items: stretch;
+  with: 100%;
+  background: #F4A261;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.box {
+  width:25%;
+  background:#E76F51;
+  padding: 1rem;
+  border: 1rem dashed #E9C46A;
+}
+
+/*order */
+.container-order > .box{
+  border: 1rem dashed #E76F51;
+  font-size: 4rem;
+  font-weight: bold;
+}
+.blue{
+   order: 3;
+   background: #264653;
+}
+.breeze {
+    order: 2;
+    background:#2A9D8F;
+}
+.yellow{
+  order: 1;
+  background: #E9C46A;
+}
+
+/*Horizontal and vertical alignment*/
+.flex-center-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.flex-center-center > div{
+  width: 33%;
+  font-weight: bold;
+  font-size: 5rem;
+text-transform: uppercase;
+  color: #264653;
+}
+
+/*responsive grig*/
+.responsive > .box {
+  font-weight: bold;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #264653;
+border: 1rem solid #E9C46A;
+}
+.col-1{
+	flex: 1;
+}
+
+.col-2{
+	flex: 2;
+}
+
+@media (max-width: 800px){
+	.responsive{
+		flex-direction: column;
+    align-items:center;
+	}
+  .col-1, .col-2 {
+    width: 100%;
+  }
+}
+
+/*sticky footer*/
+.sticky-container{
+  display:flex;
+  flex-direction:column;
+  height: 90vh;
+  with: 100%;
+  background: #F4A261;
+}
+.sticky-content{
+  flex: 1 0 auto;
+  font-weight: bold;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #264653;
+  border: 1rem dashed #E76F51;
+}
+.sticky-footer{
+  flex: 0 0 auto;
+  font-weight: bold;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #264653;
+background:  #2A9D8F;
+}
